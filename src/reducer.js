@@ -31,8 +31,11 @@ const reducer = (state, action) => {
             };
         case 'REMOVE_FROM_BASKET':
             //Logic for removing items from basket
-            let newBasket = { ...state.basket };
 
+            //here we cloned the basket
+            let newBasket = [...state.basket];
+
+            //we checked to see if products existed in the basket
             const index = state.basket.findIndex((basketItem) => basketItem.id === action.id);
 
             if (index >= 0) {
