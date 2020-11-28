@@ -4,6 +4,7 @@ import { auth } from "./firebase";
 import { Link, useHistory } from "react-router-dom";
 
 function Login() {
+    const history = useHistory();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -14,7 +15,7 @@ function Login() {
         auth.signInWithEmailAndPassword(email, password)
             .then((auth) => {
                 //logged in, so redirect to homepage
-
+                history.push("/");
             })
             .catch(e => alert(e.message))
     };
@@ -23,7 +24,14 @@ function Login() {
         event.preventDefault(); // this stops auto page refresh on submit/click
 
         //do registration logic here...
-    }
+
+        auth.createUserWithEmailAndPassword(email, password)
+            .then(auth => {
+                //create a user and log in...,then, redirect to homepage
+                history.push("/");
+            })
+            .catch(e => alert(e.message));
+    };
 
 
 
