@@ -22,6 +22,12 @@ function Header() {
             </Link>
 
             <div className="header__search">
+                {/* <select>
+                    <option>All Departments</option>
+                    <option>Arts & Craft</option>
+                    <option>Automotive</option>
+                    <option>Baby</option>
+                </select> */}
                 <input type="text" className="header__searchInput" />
                 <SearchIcon className="header__searchIcon" />
             </div>
@@ -35,7 +41,7 @@ function Header() {
                     </div>
                 </Link>
 
-                <Link to="/login" className="header__link">
+                <Link to="/returns" className="header__link">
                     <div className="header__option">
                         <span className="header__optionLineOne">Returns</span>
                         <span className="header__optionLineTwo">& Orders</span>
@@ -61,3 +67,5 @@ function Header() {
     )
 }
 export default Header
+
+

@@ -1,0 +1,55 @@
+body {
+    background-color: lightgrey;
+}
+
+.returns {
+    background-color: #232f3e;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;    
+}
+
+/* .returns__menuIcon {
+    color: yellow;    
+} */
+
+.all {
+    color: red;    
+    padding: 10px;    
+}
+
+.returns__nav {    
+    height: 40px;
+    width: 100%;        
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    z-index: 100;
+}
+
+.returns__link {
+    color: white;
+    text-decoration: none;
+}
+
+.returns__link9 {
+    position: absolute;
+    right: 0px;
+    color: red;
+    text-decoration: none;      
+    margin-right: 0;
+}
+
+.returns__option {
+    display: flex;    
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.returns__optionLineOne {
+    font-size: 18px;
+    font-weight: 500;
+}
+
